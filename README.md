@@ -7,3 +7,4 @@
 5. Mini Project - Grocery application - React
 6. Database Task 
 7. Database - Health record
+8. Project - Hiring app 
