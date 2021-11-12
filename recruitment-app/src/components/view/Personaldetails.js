@@ -57,7 +57,11 @@ export const Personaldetails = () => {
     localStorage.setItem('details',JSON.stringify(details));
   })
 
+  const title = "Your name"
+    const steps = " 3 " 
+
   return (
+
     <div>
       
       <div className="ms-5 me-5 mt-3">
@@ -68,7 +72,7 @@ export const Personaldetails = () => {
                     </div>
             </div>
             <br />
-            <Flex />
+            <Flex title = {title} steps={steps}/>
 
           <div className="one p-3 mb-5 bg-white">
           <div className="d-flex justify-content-center py-5">

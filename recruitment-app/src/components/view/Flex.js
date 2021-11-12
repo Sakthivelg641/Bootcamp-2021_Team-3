@@ -11,15 +11,15 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function BasicGrid() {
+export default function Flex(props) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
         <Item >
             <div className="row justify-content-between">
-              <div className="col-2 ">Upload your resume</div>
-              <div className="col-2">4 steps to complete</div>
+              <div className="col-2 ">{props.title}</div>
+              <div className="col-2">{props.steps} steps to complete</div>
             
             </div>
         </Item>  

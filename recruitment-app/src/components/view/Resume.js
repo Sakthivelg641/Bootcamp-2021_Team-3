@@ -11,6 +11,8 @@ import Logo from "./Logo"
 
 const Resume=() =>{
     
+    const title = "Upload your resume"
+    const steps = " 4 " 
     return(
         
         <div className="ms-5 me-5 mt-3">
@@ -22,7 +24,7 @@ const Resume=() =>{
                     </div>
             </div>
             <br />
-             <Flex />
+             <Flex title = {title} steps={steps}/>
 
             <div className="resume-quote">
                 <h4>“Your resume says a lot about you”</h4>
