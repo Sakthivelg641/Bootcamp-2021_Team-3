@@ -1,20 +1,26 @@
-import './App.css';
-import Start from './components/view/Start';
-import { Route,Routes } from 'react-router-dom';
-import Resume from './components/view/Resume';
-import Personaldetails from './components/view/Personaldetails';
+import React, { Suspense } from "react";
+import "./App.css";
+// import Start from "./components/views/Start";
+// import { Route, Routes } from "react-router-dom";
+// import Resume from "./components/views/Resume";
+// import PersonalDetails from "./components/views/PersonalDetails";
+import Router from "./Router";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Routes>
-        <Route exact path='/' element={<Start />} />
-        <Route exact path='/resume' element={<Resume />} />
-        <Route exact path='/personaldetails' element={<Personaldetails />} />
-        
-      </Routes>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Router />
+    </Suspense>
   );
+  // return (
+  //   <div className="App">
+  //     {/* <Routes>
+  //       <Route exact path="/" element={<Start />} />
+  //       <Route exact path="/resume" element={<Resume />} />
+  //       <Route exact path="/personalDetails" element={<PersonalDetails />} />
+  //     </Routes> */}
+  //   </div>
+  // );
 };
 
 export default App;

@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
-  textAlign: 'center',
+  textAlign: "center",
   color: theme.palette.text.secondary,
 }));
 
@@ -16,16 +16,14 @@ export default function Flex(props) {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
-        <Item >
+          <Item>
             <div className="row justify-content-between">
               <div className="col-2 ">{props.title}</div>
               <div className="col-2">{props.steps} steps to complete</div>
-            
             </div>
-        </Item>  
+          </Item>
         </Grid>
       </Grid>
     </Box>
-    
   );
 }
